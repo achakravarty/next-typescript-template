@@ -98,14 +98,17 @@ TypeScript configuration is in `tsconfig.json`. You can customize it to fit your
 
 ## GitHub Workflows
 
-This template includes several GitHub workflows to automate common tasks:
+This template includes a consolidated GitHub workflow to automate common tasks:
 
 ### CI/CD
 
-- **Lint**: Automatically runs ESLint to check code quality on push and pull requests
-- **TypeCheck**: Verifies TypeScript types on push and pull requests
-- **Build**: Ensures the project builds successfully on push and pull requests
+The CI/CD workflow runs the following tasks in parallel:
+- **Lint**: Automatically runs ESLint to check code quality
+- **TypeCheck**: Verifies TypeScript types
+- **Build**: Ensures the project builds successfully
 - **Format**: Automatically formats code with Prettier on push to main
+
+All tasks are visualized in a matrix in the GitHub Actions UI, making it easy to see which tasks passed or failed.
 
 ### Dependency Management
 
