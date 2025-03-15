@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js TypeScript Template
+
+A modern, feature-rich starter template for building web applications with Next.js, TypeScript, Tailwind CSS, Shadcn UI, Prettier, and ESLint.
+
+## Features
+
+- **Next.js 14** - The React framework for production
+- **React 19** - The library for web and native user interfaces
+- **TypeScript** - Strongly typed programming language that builds on JavaScript
+- **Tailwind CSS** - A utility-first CSS framework
+- **Shadcn UI** - Re-usable components built with Radix UI and Tailwind CSS
+- **ESLint** - Pluggable JavaScript linter
+- **Prettier** - Opinionated code formatter
+- **App Router** - Next.js App Router for file-based routing
+- **Dark Mode Support** - Built-in dark mode support
+- **Client & Server Components** - Properly structured for Next.js App Router
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18.17 or later
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/next-typescript-template.git my-project
+   cd my-project
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Project Structure
+
+```
+next-typescript-template/
+├── public/              # Static assets
+├── src/
+│   ├── app/             # App router pages
+│   ├── components/      # React components
+│   │   └── ui/          # Shadcn UI components
+│   └── lib/             # Utility functions
+├── .eslintrc.js         # ESLint configuration
+├── .prettierrc          # Prettier configuration
+├── next.config.js       # Next.js configuration
+├── tailwind.config.js   # Tailwind CSS configuration
+└── tsconfig.json        # TypeScript configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Adding Shadcn UI Components
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This template uses [Shadcn UI](https://ui.shadcn.com/) for UI components. You can add more components using the CLI:
 
-## Learn More
+```bash
+npx shadcn@latest add [component-name]
+```
 
-To learn more about Next.js, take a look at the following resources:
+For example:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npx shadcn@latest add dropdown-menu
+npx shadcn@latest add avatar
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Styling
 
-## Deploy on Vercel
+This template uses Tailwind CSS for styling. You can customize the theme in `tailwind.config.js`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### TypeScript
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+TypeScript configuration is in `tsconfig.json`. You can customize it to fit your project's needs.
+
+## Understanding Client and Server Components
+
+This template follows Next.js App Router's model of using Server Components by default, with Client Components where needed for interactivity.
+
+### Server Components (Default)
+- Render on the server
+- Don't include client-side JavaScript
+- Can't use hooks or event handlers
+- Better performance for static content
+
+### Client Components
+- Include the `'use client'` directive at the top
+- Support interactivity with hooks and event handlers
+- Used for interactive UI elements
+
+When adding interactivity:
+1. Create a Client Component with the `'use client'` directive
+2. Add your interactive logic (event handlers, hooks)
+3. Import and use it within your Server Components
+
+For more information, see the [Next.js documentation on Client and Server Components](https://nextjs.org/docs/app/building-your-application/rendering/client-components).
+
+## Deployment
+
+You can deploy this template to any platform that supports Next.js, such as:
+
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
+- [AWS Amplify](https://aws.amazon.com/amplify/)
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new) from the creators of Next.js.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn UI](https://ui.shadcn.com/)
