@@ -96,6 +96,27 @@ This template uses Tailwind CSS for styling. You can customize the theme in `tai
 
 TypeScript configuration is in `tsconfig.json`. You can customize it to fit your project's needs.
 
+## GitHub Workflows
+
+This template includes several GitHub workflows to automate common tasks:
+
+### CI/CD
+
+- **Lint**: Automatically runs ESLint to check code quality on push and pull requests
+- **TypeCheck**: Verifies TypeScript types on push and pull requests
+- **Build**: Ensures the project builds successfully on push and pull requests
+- **Format**: Automatically formats code with Prettier on push to main
+
+### Dependency Management
+
+- **Dependabot**: Automatically creates pull requests for dependency updates weekly
+  - Groups minor and patch updates together
+  - Ignores major updates to avoid breaking changes
+
+To use these workflows, make sure your repository has the appropriate permissions:
+1. Go to Settings > Actions > General
+2. Ensure "Read and write permissions" is selected under "Workflow permissions"
+
 ## Understanding Client and Server Components
 
 This template follows Next.js App Router's model of using Server Components by default, with Client Components where needed for interactivity.
