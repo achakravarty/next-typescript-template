@@ -106,7 +106,6 @@ The CI/CD workflow runs the following tasks in parallel:
 - **Lint**: Automatically runs ESLint to check code quality
 - **TypeCheck**: Verifies TypeScript types
 - **Build**: Ensures the project builds successfully
-- **Format**: Automatically formats code with Prettier on push to main
 
 All tasks are visualized in a matrix in the GitHub Actions UI, making it easy to see which tasks passed or failed.
 
